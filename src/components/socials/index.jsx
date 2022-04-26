@@ -11,7 +11,7 @@ const Socials = ({ isHeader = false }) => {
       <div className={cn("flex align-center", {[s.socials__header]: isHeader})}>
         <a href="https://twitter.com/omomo_finance" target="_blank" rel="noreferrer"><TwIcon className={s.socials__icon} /></a>
         <a href="https://medium.com/omomo" target="_blank" rel="noreferrer"><MdIcon className={s.socials__icon} /></a>
-        <a href="https://github.com/nearlend" target="_blank" rel="noreferrer"><GhIcon className={s.socials__icon} /></a>
+        <a href="https://github.com/omomo-finance" target="_blank" rel="noreferrer"><GhIcon className={s.socials__icon} /></a>
       </div>
     </div>
   );

@@ -93,6 +93,8 @@
 
         @include mobile {
           left: 15px;
+          bottom: 0;
+          top: 45px;
           font-size: 11px;
         }
       }

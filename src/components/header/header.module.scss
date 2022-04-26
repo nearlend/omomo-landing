@@ -1,0 +1,25 @@
+@import '../../assets/styles/mixins';
+
+.header {
+  padding: 40px 0;
+
+  &__doc {
+    margin-right: 60px;
+
+    @include mobile {
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    @include mobile {
+      max-width: 85px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

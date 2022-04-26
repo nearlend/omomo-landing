@@ -1,0 +1,30 @@
+name: omomo-landing main deploy automatically
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [closed]
+    branches: [main]
+  workflow_dispatch:
+  
+concurrency: omomo-finance
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: build docker image
+        run: |
+          export name=$(echo ${GITHUB_REPOSITORY#*/}"-"${GITHUB_REF##*/} | tr '[:upper:]' '[:lower:]')
+          export key="ssh-key-omomo"
+          export timestamp=$(date +%s)
+          export host=${{secrets.OMOMOHOST}}
+          docker build . -t ${name}-${timestamp}
+          docker save -o ${name}-${timestamp}.tar ${name}-${timestamp}
+          echo "${{secrets.OMOMODEPLOYSSH}}" > ${key}
+          sudo chmod 600 ${key}
+          scp -i ${key} -o "StrictHostKeyChecking no" ${name}-${timestamp}.tar ${host}:${name}-${timestamp}.tar
+          ssh -i ${key} -o "StrictHostKeyChecking no" ${host} 'docker load -i '${name}'-'${timestamp}'.tar || exit 1 ; docker stop '${name}' || true; docker run -d --restart always -p 4001:3000 --name '${name}'-new '${name}'-'${timestamp}'; docker rm '${name}' || true; docker rmi $(docker images -q) || true; docker rename '${name}'-new '${name}'; rm '${name}'-'${timestamp}'.tar'

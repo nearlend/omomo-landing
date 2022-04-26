@@ -87,13 +87,12 @@
 
       span {
         position: absolute;
-        bottom: -20px;
+        top: 45px;
         left: 25px;
         font-size: 12px;
 
         @include mobile {
           left: 15px;
-          bottom: 0;
           top: 45px;
           font-size: 11px;
         }
@@ -119,6 +118,7 @@
           width: 100%;
           padding: 10px 25px 10px 15px;
           box-sizing: border-box;
+          margin: 0;
         }
 
         &::placeholder {
@@ -142,8 +142,8 @@
         cursor: pointer;
         background-color: transparent;
 
-        @include mobile {
-          height: 41px;
+        @include desktop-small {
+          height: 42px;
         }
 
         &:hover {

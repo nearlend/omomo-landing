@@ -16,6 +16,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: main
+      - run: sed -i 's@mailgunapikey@'"${{secrets.prodmailgunapikey}}"'@g' ./.github/workflows/variables
+      - run: mv ./.github/workflows/variables .env.local;
       - name: build docker image
         run: |
           export name=$(echo ${GITHUB_REPOSITORY#*/}"-"${GITHUB_REF##*/} | tr '[:upper:]' '[:lower:]')

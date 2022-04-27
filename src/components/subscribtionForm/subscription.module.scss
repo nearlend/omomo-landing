@@ -87,13 +87,16 @@
 
       span {
         position: absolute;
-        top: 45px;
+        top: 52px;
         left: 25px;
         font-size: 12px;
 
+        @include desktop-small {
+          top: 45px;
+        }
+
         @include mobile {
           left: 15px;
-          top: 45px;
           font-size: 11px;
         }
       }

@@ -10,6 +10,7 @@ import WIcon2 from '../../assets/images/icons/w2.svg';
 import WIcon3 from '../../assets/images/icons/w3.svg';
 import SubscriptionForm from "../subscribtionForm";
 import Socials from "../socials";
+import cn from "classnames";
 
 const Main = () => {
   return (
@@ -20,6 +21,7 @@ const Main = () => {
             <div className={s.main__top__info}>
               <h1>Main liquidity market on NEAR protocol</h1>
               <img src={Logo} alt="logo" className={s.main__top__logo} />
+              <a href="https://app.omomo.finance" target="_blank" rel="noreferrer" className={cn("btn green", s.launch__btn)}>Launch App</a>
             </div>
             <SubscriptionForm />
           </div>

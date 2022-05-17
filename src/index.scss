@@ -22,6 +22,7 @@
   --text: #fff;
   --text-d: #002940;
   --accent: #6BE870;
+  --accent-h: #51e059;
   --border: rgba(255, 255, 255, 0.3);
   --error: #EA6565;
 }
@@ -93,6 +94,7 @@ a {
   text-decoration: none;
   cursor: pointer;
   transition: border-color 0.3s, color 0.3s, background-color .3s;
+  white-space: nowrap;
 
   &:hover {
     border-color: var(--accent);
@@ -100,12 +102,23 @@ a {
     color: var(--text-d);
   }
 
+  &.green {
+    border-color: var(--accent);
+    background-color: var(--accent);
+    color: var(--text-d);
+
+    &:hover {
+      border-color: var(--accent-h);
+      background-color: var(--accent-h);
+    }
+  }
+
   @include desktop-small {
     width: 140px;
   }
 
   @include mobile {
-    width: 100px;
+    width: 120px;
     height: 35px;
   }
 }

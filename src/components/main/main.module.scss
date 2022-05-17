@@ -2,6 +2,15 @@
 
 .main {
 
+  .launch__btn {
+    display: none;
+
+    @include mobile {
+      display: flex;
+      margin-top: 32px;
+    }
+  }
+
   &__bg {
     background: url("../../assets/images/about-bg.svg") 43% 50px no-repeat;
 

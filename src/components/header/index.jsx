@@ -13,7 +13,9 @@ const Header = () => {
 
               <div className="flex align-center">
                 <a href="https://omomo.gitbook.io/omomo/general/readme" target="_blank" rel="noreferrer" className={cn("btn", s.header__doc)}>Docs</a>
-                <Socials isHeader />
+                <a href="https://app.omomo.finance" target="_blank" rel="noreferrer" className={cn("btn green", s.header__launch)}>Launch App</a>
+
+                  <Socials isHeader />
               </div>
             </div>
           </div>

@@ -21,7 +21,7 @@ const Main = () => {
             <div className={s.main__top__info}>
               <h1>Main liquidity market on NEAR protocol</h1>
               <img src={Logo} alt="logo" className={s.main__top__logo} />
-              <a href="https://app.omomo.finance" target="_blank" rel="noreferrer" className={cn("btn green", s.launch__btn)}>Launch App</a>
+              {/*<a href="https://app.omomo.finance" target="_blank" rel="noreferrer" className={cn("btn green", s.launch__btn)}>Launch App</a>*/}
             </div>
             <SubscriptionForm />
           </div>

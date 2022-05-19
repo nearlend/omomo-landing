@@ -1,0 +1,10 @@
+.header {
+    flex: 0 0 auto;
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 20px;
+        align-items: center;
+    }
+}

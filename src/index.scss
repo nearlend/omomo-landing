@@ -59,11 +59,19 @@ a {
 .container {
   position: relative;
   max-width: 1440px;
-  padding: 0 15px;
+  padding: 0 70px;
   margin: 0 auto;
 
   @include desktop-small {
     max-width: 1080px;
+  }
+
+  @include tablet {
+    padding: 0 50px;
+  }
+
+  @include mobile {
+    padding: 0 15px;
   }
 }
 

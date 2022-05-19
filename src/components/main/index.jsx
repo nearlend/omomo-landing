@@ -10,7 +10,7 @@ import WIcon2 from '../../assets/images/icons/w2.svg';
 import WIcon3 from '../../assets/images/icons/w3.svg';
 import SubscriptionForm from "../subscribtionForm";
 import Socials from "../socials";
-import cn from "classnames";
+// import cn from "classnames";
 
 const Main = () => {
   return (

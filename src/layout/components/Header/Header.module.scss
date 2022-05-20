@@ -1,10 +1,41 @@
-.header {
-    flex: 0 0 auto;
+@import '../../../styles/theme/mixins';
 
-    &__row {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        grid-gap: 20px;
+.header {
+    padding: 40px 0;
+
+    &__doc {
+        margin-right: 40px;
+
+        @include tablet {
+            margin-right: 20px;
+        }
+
+        @include mobile {
+            margin: 0;
+        }
+    }
+
+    &__launch {
+        margin-right: 60px;
+
+        @include tablet {
+            margin: 0;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__logo {
+        @include mobile {
+            max-width: 85px;
+        }
+    }
+
+    &__block {
+        display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 }

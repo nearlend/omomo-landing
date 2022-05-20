@@ -1,0 +1,11 @@
+@import '../styles/theme/mixins';
+
+.main {
+  &__bg {
+    background: url("../../public/assets/images/about-bg.svg") 43% 50px no-repeat;
+
+    @include mobile {
+      background: url("../../public/assets/images/about-bg.svg") 46% -65px no-repeat;
+    }
+  }
+}

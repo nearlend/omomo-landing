@@ -1,0 +1,82 @@
+@import "../../../styles/theme/mixins";
+
+.why {
+  margin-bottom: 165px;
+
+  @include desktop-small {
+    margin-bottom: 140px;
+  }
+
+  @include mobile {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      padding: 40px 49px;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+      backdrop-filter: blur(32.8px);
+      border-radius: 76px;
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+      margin-bottom: 40px;
+
+      @include desktop-small {
+        padding: 30px 40px;
+        margin-bottom: 30px;
+      }
+
+      @include mobile {
+        padding: 20px 34px;
+        min-height: 48px;
+        margin-bottom: 24px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &__img {
+        display: flex;
+        justify-content: center;
+        max-width: 61px;
+        margin-right: 68px;
+
+        @include desktop-small {
+          max-width: 51px;
+          max-height: 32px;
+          margin-right: 35px;
+        }
+
+        @include mobile {
+          max-width: 40px;
+          font-size: 32px;
+          max-height: 28px;
+          margin-right: 24px;
+        }
+      }
+
+      p {
+        margin: 0;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 39px;
+
+        @include desktop-small {
+          font-size: 26px;
+          line-height: 26px;
+        }
+
+        @include mobile {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

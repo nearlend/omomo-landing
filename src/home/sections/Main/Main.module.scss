@@ -1,0 +1,84 @@
+@import "../../../styles/theme/mixins";
+
+.main {
+  &__wrap {
+    margin-top: 20px;
+    background: url("../../../../public/assets/images/top-img.svg") top right no-repeat;
+    padding-bottom: 366px;
+
+    @include desktop-small {
+      background-size: 580px;
+      padding-bottom: 210px;
+    }
+
+    @include tablet {
+      background-size: 423px;
+      background-position: 100% 70px;
+    }
+
+    @include mobile {
+      padding: 0 15px 80px 15px;
+      margin: 0 -15px;
+      background-size: 423px;
+      background-position: 100% 12px;
+    }
+
+    @include smartphone {
+      background-size: 423px;
+      background-position: calc(100% - -142px) 12px;
+    }
+  }
+
+  &__info {
+    padding: 20px 0 85px;
+    @include mobile {
+      padding: 10px 0 85px;
+    }
+  }
+
+  h1 {
+    margin: 0 0 20px;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 110%;
+    max-width: 690px;
+    text-shadow: 1px 2px 0 #00000052;
+
+    @include desktop-small {
+      font-size: 48px;
+      max-width: 530px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 115%;
+      max-width: 259px;
+    }
+  }
+  &__logo {
+    width: 287px;
+
+    @include desktop-small {
+      width: 230px;
+    }
+
+    @include mobile {
+      width: 172px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: -80px;
+    right: 0;
+  }
+}
+
+.launch__btn {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    margin-top: 32px;
+  }
+}

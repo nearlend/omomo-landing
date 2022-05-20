@@ -1,0 +1,16 @@
+h2 {
+  font-weight: 700;
+  font-size: 64px;
+  margin: 0 0 65px;
+
+  @include desktop-small {
+    font-size: 48px;
+    line-height: 100%;
+    margin-bottom: 40px;
+  }
+
+  @include mobile {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}

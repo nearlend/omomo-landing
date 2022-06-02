@@ -2,7 +2,7 @@ import React from 'react';
 import Socials from '@components/Socials';
 import cn from 'classnames';
 
-import s from './header.module.scss';
+import s from './Header.module.scss';
 
 const Header = () => {
   return (

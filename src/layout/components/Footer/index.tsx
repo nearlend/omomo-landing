@@ -2,7 +2,7 @@ import React from 'react';
 import Socials from '@components/Socials';
 import cn from 'classnames';
 
-import s from './footer.module.scss';
+import s from './Footer.module.scss';
 
 const Footer = () => {
   return (

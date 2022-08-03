@@ -18,7 +18,7 @@ const HtmlMeta = ({
     <title>{title ? `${title} | ${APP_SEO_TITLE}` : APP_SEO_TITLE}</title>
     <link rel="icon" href={'/favicon.png'} />
     <meta name="description" content={description || APP_SEO_DESCRIPTION} />
-    <meta property="og:site_name" content="Cloud NFT" />
+    <meta property="og:site_name" content="Omomo" />
     <meta property="og:title" content={title} key="title" />
     <meta property="og:description" content={description || APP_SEO_DESCRIPTION} key="ogdesc" />
     <meta property="og:url" content={url} />

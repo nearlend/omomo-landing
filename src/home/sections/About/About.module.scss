@@ -16,13 +16,15 @@
   }
 
   &__block {
-    display: inline-flex;
-    padding: 56px 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 44px 88px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
     backdrop-filter: blur(32.8px);
     border-radius: 35px;
-    border-top: 1px solid var(--border);
-    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--accent);
 
     @include desktop-small {
       padding: 55px;
@@ -34,13 +36,59 @@
       padding: 30px;
     }
 
-    img {
-      @include desktop-small {
-        max-width: 120px;
-      }
+    &__arrow {
+      margin: 0 60px;
 
       @include mobile {
-        max-width: 60px;
+        transform: rotate(90deg);
+        margin: 50px 0;
+      }
+    }
+
+    &__product {
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(32.8px);
+      border-top: 1px solid var(--accent);
+      border-radius: 35px;
+      padding: 75px 83px;
+      align-items: center;
+      text-align: center;
+      font-size: 24px;
+
+      @include mobile {
+        padding: 75px 0;
+        width: 100%;
+      }
+
+      img {
+        width: 50px;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        backdrop-filter: blur(32.8px);
+        border-top: 1px solid var(--accent);
+        border-radius: 35px;
+        padding: 41px;
+        font-size: 24px;
+
+        img {
+          width: 32px;
+          margin-right: 25px;
+        }
       }
     }
 

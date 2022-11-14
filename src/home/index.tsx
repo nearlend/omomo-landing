@@ -1,6 +1,6 @@
 import React from 'react';
 import { HtmlMeta } from '@components/index';
-import { Main, About, WhyChoose, Contact } from './sections';
+import { Main, About, WhyChoose, Contact, Achievements, Clients } from './sections';
 
 import s from './Home.module.scss';
 
@@ -13,6 +13,8 @@ const Home = () => {
         <div className={s.main__bg}>
           <About />
           <WhyChoose />
+          <Achievements />
+          <Clients />
           <Contact />
         </div>
       </main>

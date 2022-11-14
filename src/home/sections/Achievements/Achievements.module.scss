@@ -1,0 +1,83 @@
+@import "../../../styles/theme/mixins";
+
+.achievements {
+  margin-bottom: 165px;
+
+  @include desktop-small {
+    margin-bottom: 140px;
+  }
+
+  @include mobile {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(32.8px);
+    border-radius: 35px;
+    border-top: 1px solid var(--accent);
+    padding: 45px;
+
+    &:last-child {
+      border-top: 1px solid var(--border);
+      opacity: .5;
+    }
+
+    &__head {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+
+      span {
+        opacity: 0.7;
+      }
+
+      p {
+        margin: 0 0 40px;
+        font-size: 34px;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      img {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @include mobile {
+          width: 70px;
+          height: 70px;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &__body {
+      p {
+        margin-top: 0;
+        font-size: 34px;
+        margin-bottom: 8px;
+        max-width: 299px;
+        font-weight: 700;
+
+        @include mobile {
+          max-width: 100%;
+        }
+      }
+
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+}

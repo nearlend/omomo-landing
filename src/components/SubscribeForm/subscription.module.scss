@@ -25,9 +25,10 @@
 
   &__title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 34px;
+    line-height: 40px;
     margin-bottom: 30px;
+    max-width: 537px;
 
     @include desktop-small {
       font-size: 26px;

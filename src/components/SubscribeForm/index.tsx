@@ -50,7 +50,9 @@ const SubscriptionForm = ({ isContact = false }) => {
   return (
     <div className={cn(s.subscription, { [s.subscription__contact]: isContact })}>
       <h3 className={s.subscription__title}>
-        {isContact ? 'Subscribe for newsletter' : 'Liquidity Mining is coming …'}
+        {isContact
+          ? 'Subscribe for newsletter'
+          : 'Lend, borrow, trade with leverage and utilizes derivatives on Near'}
       </h3>
       <div className={s.subscription__form}>
         <p>Get notified</p>

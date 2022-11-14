@@ -15,6 +15,7 @@
     display: flex;
     gap: 100px;
     max-width: 1120px;
+    margin-bottom: 100px;
 
     @include mobile {
       flex-direction: column;
@@ -66,7 +67,8 @@
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
         backdrop-filter: blur(32.8px);
         border-radius: 35px;
-        border-top: 1px solid var(--accent);
+        border-top: 1px solid var(--border);
+        border-left: 1px solid var(--border);
 
         @include mobile {
           height: 150px;

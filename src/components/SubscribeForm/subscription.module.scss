@@ -32,8 +32,9 @@
 
     @include desktop-small {
       font-size: 26px;
-      line-height: 26px;
-      margin-bottom: 20px;
+      line-height: 33px;
+      margin-bottom: 26px;
+      max-width: 440px;
     }
 
     @include mobile {

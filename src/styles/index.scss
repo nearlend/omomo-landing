@@ -48,7 +48,7 @@ a {
   margin: 0 auto;
 
   @include desktop-small {
-    max-width: 1080px;
+    max-width: 1000px;
   }
 
   @include tablet {

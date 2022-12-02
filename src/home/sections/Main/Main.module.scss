@@ -31,6 +31,11 @@
 
   &__info {
     padding: 20px 0 85px;
+
+    @include desktop-small {
+      padding: 10px 0 75px;
+    }
+
     @include mobile {
       padding: 10px 0 85px;
     }

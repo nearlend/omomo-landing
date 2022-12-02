@@ -27,7 +27,7 @@
     border-top: 1px solid var(--accent);
 
     @include desktop-small {
-      padding: 55px;
+      padding: 35px 40px;
     }
 
     @include mobile {
@@ -38,6 +38,11 @@
 
     &__arrow {
       margin: 0 60px;
+
+      @include desktop-small {
+        margin: 0 35px;
+        max-width: 73px;
+      }
 
       @include mobile {
         transform: rotate(90deg);
@@ -56,6 +61,11 @@
       text-align: center;
       font-size: 24px;
 
+      @include desktop-small {
+        padding: 54px 64px;
+        font-size: 18px;
+      }
+
       @include mobile {
         padding: 75px 0;
         width: 100%;
@@ -69,7 +79,7 @@
 
     &__features {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 20px;
 
       @include mobile {
@@ -85,9 +95,18 @@
         padding: 41px;
         font-size: 24px;
 
+        @include desktop-small {
+          padding: 25px 30px;
+          font-size: 18px;
+        }
+
         img {
           width: 32px;
           margin-right: 25px;
+
+          @include desktop-small {
+            margin-right: 20px;
+          }
         }
       }
     }

@@ -8,35 +8,47 @@ const Benefits = () => {
         <h2 className={s.why__title}>Benefits</h2>
         <div className={s.why__list}>
           <div className={s.why__list__item}>
-            <div className={s.why__list__item__img}>
-              <img src={'/assets/images/icons/check.svg'} alt="icon" />
-            </div>
+            <img
+              className={s.why__list__item__img}
+              src={'/assets/images/icons/check.svg'}
+              alt="icon"
+            />
+
             <p>Permissionless listing on the money market</p>
           </div>
           <div className={s.why__list__item}>
-            <div className={s.why__list__item__img}>
-              <img src={'/assets/images/icons/check.svg'} alt="icon" />
-            </div>
+            <img
+              className={s.why__list__item__img}
+              src={'/assets/images/icons/check.svg'}
+              alt="icon"
+            />
             <p>All operations executed on-chain and managed by smart contracts </p>
           </div>
           <div className={s.why__list__item}>
-            <div className={s.why__list__item__img}>
-              <img src={'/assets/images/icons/check.svg'} alt="icon" />
-            </div>
+            <img
+              className={s.why__list__item__img}
+              src={'/assets/images/icons/check.svg'}
+              alt="icon"
+            />
             <p>
               No fees on the DEX <span>(got it back as a liquidity provider)</span>
             </p>
           </div>
           <div className={s.why__list__item}>
-            <div className={s.why__list__item__img}>
-              <img src={'/assets/images/icons/check.svg'} alt="icon" />
-            </div>
+            <img
+              className={s.why__list__item__img}
+              src={'/assets/images/icons/check.svg'}
+              alt="icon"
+            />
+
             <p>No slippage while swapping on the DEX</p>
           </div>
           <div className={s.why__list__item}>
-            <div className={s.why__list__item__img}>
-              <img src={'/assets/images/icons/check.svg'} alt="icon" />
-            </div>
+            <img
+              className={s.why__list__item__img}
+              src={'/assets/images/icons/check.svg'}
+              alt="icon"
+            />
             <p>DAO-governed asset tiers and protocol parameters</p>
           </div>
         </div>

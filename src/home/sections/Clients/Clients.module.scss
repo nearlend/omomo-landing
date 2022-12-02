@@ -17,6 +17,10 @@
     max-width: 1120px;
     margin-bottom: 100px;
 
+    @include desktop-small {
+      gap: 80px;
+    }
+
     @include mobile {
       flex-direction: column;
       gap: 30px;
@@ -26,12 +30,16 @@
       margin: 0;
       font-size: 24px;
       max-width: 678px;
+
+      @include desktop-small {
+        font-size: 18px;
+      }
     }
 
     p:first-child {
       font-size: 34px;
 
-      @include mobile {
+      @include desktop-small {
         font-size: 24px;
       }
     }
@@ -52,11 +60,11 @@
 
     &__list {
       display: grid;
-      grid-template-columns: repeat(7, 1fr);
+      grid-template-columns: repeat(7, minmax(0, 1fr));
       gap: 20px;
 
       @include mobile {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       }
 
       &__item {
@@ -69,6 +77,14 @@
         border-radius: 35px;
         border-top: 1px solid var(--border);
         border-left: 1px solid var(--border);
+
+        @include desktop-small {
+          height: 130px;
+
+          img {
+            transform: scale(0.8);
+          }
+        }
 
         @include mobile {
           height: 150px;
